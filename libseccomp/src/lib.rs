@@ -580,7 +580,7 @@ impl ScmpArch {
         }
     }
 
-    fn from_sys(arch: u32) -> Result<Self> {
+    pub fn from_sys(arch: u32) -> Result<Self> {
         match arch {
             SCMP_ARCH_NATIVE => Ok(Self::Native),
             SCMP_ARCH_X86 => Ok(Self::X86),
