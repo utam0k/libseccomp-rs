@@ -224,7 +224,7 @@ pub enum ScmpCompareOp {
 }
 
 impl ScmpCompareOp {
-    const fn to_sys(self) -> scmp_compare {
+    pub const fn to_sys(self) -> scmp_compare {
         match self {
             Self::NotEqual => scmp_compare::SCMP_CMP_NE,
             Self::Less => scmp_compare::SCMP_CMP_LT,
