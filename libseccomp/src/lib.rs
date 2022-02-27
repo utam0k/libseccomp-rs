@@ -457,7 +457,7 @@ impl ScmpAction {
         }
     }
 
-    fn from_sys(val: u32) -> Result<Self> {
+    pub fn from_sys(val: u32) -> Result<Self> {
         match val & SCMP_ACT_MASK {
             SCMP_ACT_KILL_PROCESS => Ok(Self::KillProcess),
             SCMP_ACT_KILL_THREAD => Ok(Self::KillThread),
